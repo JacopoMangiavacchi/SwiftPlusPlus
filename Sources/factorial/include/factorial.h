@@ -1,0 +1,1 @@
+long cFactorial(int n);
