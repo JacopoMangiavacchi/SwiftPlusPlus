@@ -1,4 +1,7 @@
-#include "include/factorial.h"
+#include "include/factorial.hpp"
+
+#include "../CPPListWrapper/ListWrapper.hpp"
+
 
 long cFactorial(int n) {
     if (n == 0 || n == 1) return 1;
