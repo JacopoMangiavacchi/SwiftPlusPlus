@@ -34,8 +34,8 @@ public:
     
     void* front();              // – Returns reference to the first element in the list
     void* back();               // – Returns reference to the last element in the list
-    void push_front(void* g);   // – Adds a new element ‘g’ at the beginning of the list
-    void push_back(void* g);    // – Adds a new element ‘g’ at the end of the list
+    void push_front(const void* g);   // – Adds a new element ‘g’ at the beginning of the list
+    void push_back(const void* g);    // – Adds a new element ‘g’ at the end of the list
     void pop_front();           // – Removes the first element of the list, and reduces size of the list by 1
     void pop_back();            // – Removes the last element of the list, and reduces size of the list by 1
     CPPListIterator* begin();   // – Returns an iterator pointing to the first element of the list

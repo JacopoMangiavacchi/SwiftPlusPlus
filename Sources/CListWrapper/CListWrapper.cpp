@@ -27,12 +27,12 @@ void* back(const void *object) {
     return list->back();
 }
 
-void push_front(const void *object, void* g) {
+void push_front(const void *object, const void* g) {
     CPPListWrapper *list = (CPPListWrapper *)object;
     return list->push_front(g);
 }
 
-void push_back(const void *object, void* g) {
+void push_back(const void *object, const void* g) {
     CPPListWrapper *list = (CPPListWrapper *)object;
     return list->push_back(g);
 }

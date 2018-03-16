@@ -9,8 +9,8 @@ extern "C" {
     bool empty(const void *object);
     void* front(const void *object);
     void* back(const void *object);
-    void push_front(const void *object, void* g);
-    void push_back(const void *object, void* g);
+    void push_front(const void *object, const void* g);
+    void push_back(const void *object, const void* g);
     void pop_front(const void *object);
     void pop_back(const void *object);
     void* begin(const void *object);

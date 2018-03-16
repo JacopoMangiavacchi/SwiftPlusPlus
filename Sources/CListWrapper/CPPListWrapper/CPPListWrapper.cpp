@@ -24,12 +24,12 @@ void* CPPListWrapper::back() {
     return stdList.back();
 }
 
-void CPPListWrapper::push_front(void* g) {
-    stdList.push_front(g);
+void CPPListWrapper::push_front(const void* g) {
+    stdList.push_front((void*)g);
 }
 
-void CPPListWrapper::push_back(void* g) {
-    stdList.push_back(g);
+void CPPListWrapper::push_back(const void* g) {
+    stdList.push_back((void*)g);
 }
 
 void CPPListWrapper::pop_front() {
