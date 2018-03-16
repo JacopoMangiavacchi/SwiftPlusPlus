@@ -1,6 +1,6 @@
-#include "include/factorial.hpp"
+#include "include/CListWrapper.hpp"
 
-#include "../CPPListWrapper/ListWrapper.hpp"
+#include "../CPPListWrapper/CPPListWrapper.hpp"
 
 
 long cFactorial(int n) {

@@ -8,8 +8,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "cfactorial", 
-            targets: ["cfactorial"]),
+            name: "CListWrapper", 
+            targets: ["CListWrapper"]),
         .library(
             name: "SwiftPlusPlus",
             targets: ["SwiftPlusPlus"]),
@@ -20,14 +20,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "cfactorial",
-            path: "./Sources/factorial"
+            name: "CListWrapper",
+            path: "./Sources/CListWrapper"
         ),
         .target(
             name: "SwiftPlusPlus",
-            dependencies: ["cfactorial"]),
+            dependencies: ["CListWrapper"]),
         .testTarget(
             name: "SwiftPlusPlusTests",
-            dependencies: ["SwiftPlusPlus", "cfactorial"]),
+            dependencies: ["SwiftPlusPlus", "CListWrapper"]),
     ]
 )

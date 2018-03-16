@@ -1,21 +1,21 @@
 //
-//  ListWrapper.hpp
-//  ListWrapper
+//  CPPListWrapper.hpp
+//  CPPListWrapper
 //
 //  Created by Jacopo Mangiavacchi on 3/15/18.
 //  Copyright © 2018 Jacopo Mangiavacchi. All rights reserved.
 //
 
-#ifndef ListWrapper_hpp
-#define ListWrapper_hpp
+#ifndef CPPListWrapper_hpp
+#define CPPListWrapper_hpp
 
 #include <stdio.h>
 #include <list>
 
-class ListIterator {
+class CPPListIterator {
 public:
-    ListIterator(std::list<void*>::const_iterator i, std::list<void*> *list);
-    ~ListIterator();
+    CPPListIterator(std::list<void*>::const_iterator i, std::list<void*> *list);
+    ~CPPListIterator();
 
     void* value();              // – Returns current value
     bool increment();           // – Increment iterator - return false if over end and do not increment
@@ -27,10 +27,10 @@ private:
 };
 
 
-class ListWrapper {
+class CPPListWrapper {
 public:
-    ListWrapper();
-    ~ListWrapper();
+    CPPListWrapper();
+    ~CPPListWrapper();
     
     void* front();              // – Returns reference to the first element in the list
     void* back();               // – Returns reference to the last element in the list
@@ -38,8 +38,8 @@ public:
     void push_back(void* g);    // – Adds a new element ‘g’ at the end of the list
     void pop_front();           // – Removes the first element of the list, and reduces size of the list by 1
     void pop_back();            // – Removes the last element of the list, and reduces size of the list by 1
-    ListIterator* begin();      // – Returns an iterator pointing to the first element of the list
-    ListIterator* end();        // – Returns an iterator pointing to the theoretical last element which follows the last element
+    CPPListIterator* begin();   // – Returns an iterator pointing to the first element of the list
+    CPPListIterator* end();     // – Returns an iterator pointing to the theoretical last element which follows the last element
     bool empty();               // – Returns whether the list is empty(1) or not(0)
 //    void insert(iterator, void* g) – Insert a new element in the list before the element at a specified position
 //    void erase(iterator) – Remove a single element from the list
@@ -50,4 +50,4 @@ private:
 };
 
 
-#endif /* ListWrapper_hpp */
+#endif /* CPPListWrapper_hpp */

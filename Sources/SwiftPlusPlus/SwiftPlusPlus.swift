@@ -1,5 +1,5 @@
 import Foundation
-import cfactorial
+import CListWrapper
 
 open class Factorial {
     public func swiftFactorial(_ n: Int) -> Int {
