@@ -7,16 +7,22 @@ class SwiftPlusPlusTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
 
-        let data = Data(bytes: [1, 0, 2, 0, 3, 0])
-        let w = SwiftListWrapper(dataSize: data.count)
-        w.push_back(value: data)
-        let dataIn = w.front()
+        let w = SwiftListWrapper(dataSize: 1)
+        w.push_back(value: "1".data(using: .utf8)!)
+        w.push_back(value: "2".data(using: .utf8)!)
+        w.push_back(value: "3".data(using: .utf8)!)
+        w.push_front(value: "0".data(using: .utf8)!)
 
-        print(dataIn!)
+        XCTAssertEqual(w.size(), 4)
 
+        XCTAssertEqual(String.init(data: w.front()!, encoding: .utf8), "0")
 
+        let it = w.begin()
 
-        //XCTAssertEqual(Factorial().swiftFactorial(5), 120)
+        let _ = it.increment()
+        let _ = it.increment()
+
+        XCTAssertEqual(String.init(data: it.value()!, encoding: .utf8), "2")
     }
 
 
