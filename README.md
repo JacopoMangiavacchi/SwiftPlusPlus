@@ -1,20 +1,7 @@
 # SwiftPlusPlus
 
-Instructions:
+## Swift++ == Swift => C => C++ => STL
 
-1) swift package init --type library
+A Swift Wrapper, calling a C Wrapper, calling a C++ wrapper, calling STL with Swift Linux Package
 
-2) add a CLibrary folder under Sources
-
-3) customize Package.swift adding CLibrary dependencies in Target
-
-    targets: [
-        .target(
-            name: "SwiftPlusPlus",
-            dependencies: ["CLibrary"]),
-        .testTarget(
-            name: "SwiftPlusPlusTests",
-            dependencies: ["SwiftPlusPlus", "CLibrary"]),
-    ]
-
-4) 
+Please see full instruction at ....
